@@ -18,14 +18,14 @@ RUN apt-get update -qq \
 ENV LANG en_US.utf8
 RUN apt-get update -qq \
     && apt-get install -y \
-    && apt-get install -y nodejs-legacy \
-    && apt-get install -y npm \
-    && apt-get install -y ruby-compass \
-    && apt-get install -y ghostscript \
-    && apt-get install -y imagemagick \
-    && apt-get install -y openjdk-8-jdk \
-    && apt-get install -y maven \
-    && apt-get install -y mongodb
+       nodejs-legacy \
+       npm \
+       ruby-compass \
+       ghostscript \
+       imagemagick \
+       openjdk-8-jdk \
+       maven \
+       mongodb
 RUN npm install -g grunt grunt-cli bower
 RUN echo '{ "allow_root": true }' > ~/.bowerrc
 
