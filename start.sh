@@ -12,7 +12,6 @@ sigterm_handler() {]
 trap 'kill ${!}; sigterm_handler' SIGTERM
 
 service mongodb start
-$BASEPATH/run.sh "${ARGS[@]}" &
 
 # wait indefinetely
 while true; do
