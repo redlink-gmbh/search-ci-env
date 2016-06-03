@@ -29,6 +29,8 @@ RUN apt-get update -qq \
 RUN npm install -g grunt grunt-cli bower
 RUN echo '{ "allow_root": true }' > ~/.bowerrc
 
+RUN cp start.sh /usr/local/bin/redlink-search-env-start.sh
+
 # Clean
 RUN apt-get update -qq \
     && apt-get -y clean -qq \
@@ -38,4 +40,5 @@ RUN apt-get update -qq \
 RUN rm -rf ~/.m2
 RUN rm -rf /src
 
-ENTRYPOINT ["/src/start.sh"]
+
+ENTRYPOINT ["/usr/local/bin/redlink-search-env-start.sh"]
