@@ -38,4 +38,4 @@ RUN apt-get update -qq \
 RUN rm -rf ~/.m2
 RUN rm -rf /src
 
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["/src/start.sh"]
