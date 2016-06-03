@@ -15,6 +15,5 @@ service mongodb start
 
 # wait indefinetely
 while true; do
-#    [ -f "${DATA_DIR}/logs/main.log" ] && tail -f "${DATA_DIR}/logs/main.log" || sleep 5s
     sleep 5s
 done
